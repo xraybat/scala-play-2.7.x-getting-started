@@ -1,5 +1,7 @@
 package controllers
 
+import models._
+
 import javax.inject._
 import play.api._
 import play.api.mvc._
@@ -29,5 +31,15 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def tutorial() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.tutorial())
   }
+
+  // `/helloworld_view`
+  def helloWorldView(msg: String) = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.helloworld(msg))
+  }
+
+  // `/helloworld_model`
+  def helloWorldModel(msg: String) = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.helloworld(Model.helloWorld(msg)))
+  }
   
-}
+} // HomeController
