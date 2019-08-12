@@ -1,5 +1,7 @@
 # Play Hello World Web Tutorial for Scala
 
+(clone of clone of later scala play framework scala-getting-started, see https://developer.lightbend.com/start/?group=play)
+
 To follow the steps in this tutorial, you will need the correct version of Java and sbt. The template requires:
 
 * Java Software Developer's Kit (SE) 1.8 or higher
