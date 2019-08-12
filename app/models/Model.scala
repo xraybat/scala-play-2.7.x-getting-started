@@ -1,7 +1,3 @@
-/**
-  * Created by psc on 7/4/17.
-  */
-
 package models
 
 import play.api.libs.json._
