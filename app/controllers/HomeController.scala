@@ -55,7 +55,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   // `/person`
   def person = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.helloworld(Model.personDetails))
+    Ok(views.html.person(Model.personDetails))
   }
 
   // `/exception`
