@@ -6,6 +6,8 @@ import javax.inject._
 import play.api._
 import play.api.mvc._
 
+import play.api.libs.json._
+
 /**
  * This controller creates an `Action` to handle HTTP requests to the
  * application's home page.
@@ -35,5 +37,17 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   // `/helloworld`
   def helloWorld(msg: String) = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.helloworld(Model.helloWorld(msg)))
+  }
+
+  // `/stock/get`
+  def stockGet = Action {
+    Ok(Json.toJson(Model.stockGet("GOOG", 650.0)))
+  }
+
+  // `POST /stock/post`
+  def stockPost = Action { request =>
+    val json = request.body.asJson.get
+    Model.stockPut(json)
+    Ok
   }
 } // HomeController
