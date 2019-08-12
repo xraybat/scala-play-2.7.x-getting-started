@@ -10,6 +10,7 @@ GET   /tutorial    controllers.HomeController.tutorial
 GET   /helloworld  controllers.HomeController.helloWorld(msg: String)
 GET   /stock/get   controllers.HomeController.stockGet
 POST  /stock/post  controllers.HomeController.stockPost
+GET   /person      controllers.HomeController.person
 GET   /exception   controllers.HomeController.exception
 
 # Map static resources from the /public folder to the /assets URL path

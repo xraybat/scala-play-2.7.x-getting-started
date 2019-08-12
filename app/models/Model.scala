@@ -8,7 +8,7 @@ import play.api.libs.json._
 
 object Model {
   private val _helloworld = new HelloWorld
-  //private val person = new Person("fred", "nerk", 44)
+  private val _person = new Person("fred", "nerk", 44)
 
   def helloWorld(msg: String) : String = _helloworld.say(msg)
 
@@ -18,8 +18,7 @@ object Model {
     println(s)
   }
 
+  def personDetails = _person.toString
   def throwException = throw new MyException("myException!!")
-
-  //def personDetails = person.toString
 
 } // Model

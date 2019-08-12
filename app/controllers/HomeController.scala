@@ -51,6 +51,11 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok
   }
 
+  // `/person`
+  def person = Action {
+    Ok(views.html.helloworld(Model.personDetails))
+  }
+
   // `/exception`
   def exception = Action {
     Model.throwException
