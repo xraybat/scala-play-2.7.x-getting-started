@@ -44,10 +44,16 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(Json.toJson(Model.stockGet("GOOG", 650.0)))
   }
 
-  // `POST /stock/post`
+  // `POST /stock/post` (via `curl-test.sh`)
   def stockPost = Action { request =>
     val json = request.body.asJson.get
     Model.stockPut(json)
     Ok
   }
+
+  // `/exception`
+  def exception = Action {
+    Model.throwException
+    Ok
+  }  
 } // HomeController

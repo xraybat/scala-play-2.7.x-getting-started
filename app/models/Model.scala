@@ -18,6 +18,8 @@ object Model {
     println(s)
   }
 
-  /*def throwException = throw new MyException("myException!!")
-  def personDetails = person.toString*/
+  def throwException = throw new MyException("myException!!")
+
+  //def personDetails = person.toString
+
 } // Model
