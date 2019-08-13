@@ -57,8 +57,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   // `/exception`
-  def exception = Action { implicit request: Request[AnyContent] =>
-    Model.throwException
+  def exception(msg: String) = Action { implicit request: Request[AnyContent] =>
+    Model.throwException(msg)
     Ok
   }  
 } // HomeController
