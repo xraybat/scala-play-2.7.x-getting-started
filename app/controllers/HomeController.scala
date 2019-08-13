@@ -39,12 +39,12 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.helloworld(Model.helloWorld(msg)))
   }
 
-  // `/stock/get`
+  // `/stock`
   def stockGet(symbol: String, price: Double) = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.stock(Model.stockGet(symbol, price)))
   }
 
-  // `POST /stock/post` (via `curl-test.sh`)
+  // `POST /stock` (via `curl-test.sh`)
   def stockPost = Action { implicit request: Request[AnyContent] =>
     val json = request.body.asJson.get
     Model.stockPut(json)
