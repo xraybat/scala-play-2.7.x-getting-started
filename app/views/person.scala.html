@@ -1,9 +1,9 @@
-@(firstName: String, lastName: String, age: Int)
+@(person: Person)
 @main("Person") {
   <section id="content">
     <div class="wrapper doc">
       <article>
-        <h1>@("i'm " + firstName + " " + lastName + ", age " + age)</h1>
+        <h1>@("i'm " + person.firstName + " " + person.lastName + ", age " + person.age)</h1>
       </article>  
       <aside>
         @commonSidebar()

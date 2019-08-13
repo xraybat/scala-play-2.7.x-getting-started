@@ -8,10 +8,13 @@ object Model {
 
   def helloWorld(msg: String) : String = _helloworld.say(msg)
 
+  // as model properties??
   def stockGet(symbol: String, price: Double): Stock = Stock(symbol, price)
   def stockPut(json: JsValue): Unit = println(json.as[Stock])
 
-  def person = (_person.firstName, _person.lastName, _person.age)
+  // as model properties??
+  def person = _person
+
   def throwException = throw new MyException("myException!!")
 
 } // Model
