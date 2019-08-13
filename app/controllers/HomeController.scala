@@ -40,8 +40,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   // `/stock/get`
-  def stockGet = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.stock(Model.stockGet("GOOG", 650.0)))
+  def stockGet(symbol: String, price: Double) = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.stock(Model.stockGet(symbol, price)))
   }
 
   // `POST /stock/post` (via `curl-test.sh`)
