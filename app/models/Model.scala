@@ -14,7 +14,7 @@ object Model {
     println(s)
   }
 
-  def personDetails = _person.toString
+  def person = (_person.firstName, _person.lastName, _person.age)
   def throwException = throw new MyException("myException!!")
 
 } // Model
