@@ -8,8 +8,8 @@ GET   /            controllers.HomeController.index
 GET   /explore     controllers.HomeController.explore
 GET   /tutorial    controllers.HomeController.tutorial
 GET   /helloworld  controllers.HomeController.helloWorld(msg: String)
-GET   /stock_get   controllers.HomeController.stockGet
-POST  /stock_post  controllers.HomeController.stockPost
+GET   /stock       controllers.HomeController.stockGet
+POST  /stock       controllers.HomeController.stockPost
 GET   /person      controllers.HomeController.person(firstName: String, lastName: String, age: Int)
 GET   /exception   controllers.HomeController.exception
 
