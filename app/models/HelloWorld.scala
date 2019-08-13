@@ -1,6 +1,5 @@
 package models
 
-class HelloWorld {
-  def say(str: String = "it's a great day!") : String = str
-  override def toString: String = say()
+class HelloWorld(msg: String = "it's a great day!") {
+  override def toString: String = msg
 }
