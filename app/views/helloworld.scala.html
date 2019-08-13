@@ -1,12 +1,12 @@
 @************
 * a comment *
 ************@
-@(msg: String)
+@(helloWorld: HelloWorld)
 @main("HelloWorld") {
   <section id="content">
     <div class="wrapper doc">
       <article>
-        <h1>@("hello, world! " + msg)</h1>
+        <h1>@("hello, world! " + helloWorld.msg)</h1>
       </article>  
       <aside>
         @commonSidebar()

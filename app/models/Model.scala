@@ -3,9 +3,7 @@ package models
 import play.api.libs.json._
 
 object Model {
-  private val _helloworld = new HelloWorld
-
-  def helloWorld(msg: String): String = new HelloWorld(msg).toString
+  def helloWorld(msg: String): HelloWorld = new HelloWorld(msg)
 
   def stockGet(symbol: String, price: Double): Stock = Stock(symbol, price)
   def stockPut(json: JsValue): Unit = println(json.as[Stock])
