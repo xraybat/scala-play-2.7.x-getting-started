@@ -1,9 +1,13 @@
-@(msg: String)
+@import play.api.libs.json._
+
+@(stock: Stock)
 @main("StockGet") {
   <section id="content">
     <div class="wrapper doc">
       <article>
-        <h1>@msg</h1>
+        <h1>@(stock.symbol + ": " + stock.price)</h1>
+        <br>
+        <h2>@("json: " + Json.toJson(stock))</h2>
       </article>  
       <aside>
         @commonSidebar()

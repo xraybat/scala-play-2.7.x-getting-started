@@ -9,10 +9,7 @@ object Model {
   def helloWorld(msg: String) : String = _helloworld.say(msg)
 
   def stockGet(symbol: String, price: Double): Stock = Stock(symbol, price)
-  def stockPut(json: JsValue): Unit = {
-    val s = json.as[Stock]
-    println(s)
-  }
+  def stockPut(json: JsValue): Unit = println(json.as[Stock])
 
   def person = (_person.firstName, _person.lastName, _person.age)
   def throwException = throw new MyException("myException!!")

@@ -41,9 +41,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   // `/stock/get`
   def stockGet = Action { implicit request: Request[AnyContent] =>
-    // must be a String to go to template, not a
-    // `play.api.libs.json.JsValue` straight to browser
-    Ok(views.html.stockget(Json.toJson(Model.stockGet("GOOG", 650.0)).toString))
+    Ok(views.html.stockget(Model.stockGet("GOOG", 650.0)))
   }
 
   // `POST /stock/post` (via `curl-test.sh`)

@@ -11,15 +11,13 @@ object Stock {
       val symbol = (json \ "symbol").as[String]
       val price = (json \ "price").as[Double]
       JsSuccess(Stock(symbol, price))
-
-    } // reads
+    }
 
     // convert from Stock object to json
     def writes(s: Stock): JsValue = {
       val stockAsList = Seq("symbol" -> JsString(s.symbol),
                             "price" -> JsNumber(s.price))
       JsObject(stockAsList)
-
-    } // writes
+    }
   } // StockFormat
 } // Stock
